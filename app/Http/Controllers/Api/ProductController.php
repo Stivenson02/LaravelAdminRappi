@@ -30,7 +30,6 @@ class ProductController extends Controller
         $totalq = $totalq- $request->quantity;
         $lote->quantity = $totalq;
         $lote->save();
-
         $calc = new \App\Http\Controllers\ProductController();
         $calc->CalcQuantity($lote->product_id);
 
